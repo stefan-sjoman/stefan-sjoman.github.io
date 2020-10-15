@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Cookie';
+    src: url(fonts/Cookie-Regular.ttf);
+    
+}
+
+:root {
+    --color1: rgb(0, 0, 0);
+    --color2: rgb(199, 199, 199);
+    --color3: rgb(80, 80, 80);
+    --font1: 'Cookie';
+}
+
+body {
+    max-width: 960px;
+    margin: auto;
+    background-color: var(--color1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-color: var(--color3);
+}
+
+header {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+footer a, footer p{
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--color2);
+}
+
+h1 {
+    font-family: var(--font1);
+    font-weight: 100;
+    font-style: italic;
+    text-shadow: black 2px 2px;
+    color: var(--color2);
+    font-size: 64px;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    color: var(--color1);
+    font-size: 30px;
+    text-align: center;
+    background-color: var(--color2);
+}
+
+h3 {
+    color: var(--color2);
+    font-size: 20px;
+}
+
+p {
+    color: var(--color2);
+    font-size: 14px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--color3);
+}
+
+.project-btn {
+    background-color: var(--color1);
+    border: 2px solid var(--color2);
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    margin: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+}

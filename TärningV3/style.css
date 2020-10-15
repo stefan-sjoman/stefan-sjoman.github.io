@@ -1,0 +1,95 @@
+body {
+    background-color: #333;
+    font-family: sans-serif;
+}
+
+header {
+    margin: auto;
+    text-align: center;
+    color: #eee;
+}
+
+h1 {
+    font-size: 56px;
+}
+h1::first-letter {
+    font-style: italic;
+    color: #f00;
+    font-weight: 100;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 900;
+    color: #000;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice-design {
+    background-color: #eee;
+    border: 10px solid #000;
+    border-radius: 30px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+}
+
+.dot {
+    background-color: #000;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.top-left{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.top-right {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.middle-left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.middle {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.middle-right {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.bottom-left {    
+    grid-column: 1;
+    grid-row: 3;   
+}
+
+.bottom-right {
+    grid-column: 3;
+    grid-row: 3;  
+}
+
+.text-middle {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    text-align: center;
+    margin: auto;
+}

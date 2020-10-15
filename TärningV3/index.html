@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="dice.js" defer></script>
+    <title>Tärning</title>
+</head>
+<body>
+    <header>
+        <h1>eDICE</h1>
+    </header>
+    <main> 
+        <section id="dice" onclick="shuffleDice()">
+            <div id="click-to-roll" class="dice-design" style="display: grid;">
+                <p class="text-middle">Click to roll!</p>
+            </div>
+            <div id="blank" class="dice-design" style="display: none;">
+                <!-- white dice space -->
+            </div>
+            <div id="one" class="dice-design" style="display: none;">
+                <div class="dot middle"></div>
+            </div>
+            <div id="two" class="dice-design" style="display: none;">
+                <div class="dot top-left"></div>
+                <div class="dot bottom-right"></div>
+            </div>
+            <div id="three" class="dice-design" style="display: none;">
+                <div class="dot top-left"></div>
+                <div class="dot middle"></div>
+                <div class="dot bottom-right"></div>
+            </div>
+            <div id="four" class="dice-design" style="display: none;">
+                <div class="dot top-left"></div>
+                <div class="dot top-right"></div>
+                <div class="dot bottom-left"></div>
+                <div class="dot bottom-right"></div>
+            </div>
+            <div id="five" class="dice-design" style="display: none;">
+                <div class="dot top-left"></div>
+                <div class="dot top-right"></div>
+                <div class="dot middle"></div>
+                <div class="dot bottom-left"></div>
+                <div class="dot bottom-right"></div>
+            </div>
+            <div id="six" class="dice-design" style="display: none;">
+                <div class="dot top-left"></div>
+                <div class="dot top-right"></div>
+                <div class="dot middle-left"></div>
+                <div class="dot middle-right"></div>
+                <div class="dot bottom-left"></div>
+                <div class="dot bottom-right"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

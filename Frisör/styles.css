@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+body {
+    background-color: black;
+    font-family: helvetica;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100px 250px 250px 250px;
+    grid-template-rows: 100px 250px 250px 20px;
+    grid-template-areas: "logo header header navbar"
+    ". gallery gallery gallery"
+    ". art1 art2 art3"
+    ". footer footer footer";
+}
+.logo {
+    grid-area: logo;
+}
+header {
+    align-self: center;
+    grid-area: header;
+}
+.navbar {
+    grid-area: navbar;
+    align-self: center;
+}
+.gallery {
+    grid-area: gallery;
+}
+article {
+    margin: 0 35px;
+}
+.art1 {
+    grid-area: art1;
+}
+.art2 {
+    grid-area: art2;
+}
+.art3 {
+    grid-area: art3;
+}
+footer {
+    grid-area: footer;
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+}
+h1, h2, h3 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: lighter;
+    color: white;
+    margin: 0;
+}
+h1 {
+    font-size: 64px;
+    font-style: italic;
+}
+h2 {
+    font-size: 32px;
+    font-style: italic;
+}
+h3 {
+    font-size: 64px;
+}
+p {
+    color: white;
+    margin: 0;  
+}
+article {
+    margin-top: 32px;
+}
+.image {
+    width: 362px;
+    border: 3px solid white;
+    margin: 2px;
+}
+li {
+    display: inline;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: gray;
+}
