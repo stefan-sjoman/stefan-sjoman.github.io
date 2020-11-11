@@ -6,9 +6,9 @@ function shuffleDice() {
 
     for (let i = 0; i < 10; i++) {
         setTimeout(function() {resetDice() }, time );
-        time += 300;
+        time += 200;
         setTimeout(function() {diceAnimation()} , time);
-        time += 300;
+        time += 200;
     }
 
     document.getElementById("dice").onclick = function(){ shuffleDice() };
