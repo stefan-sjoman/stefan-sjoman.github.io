@@ -1,95 +1,162 @@
 @font-face {
-    font-family: 'Cookie';
-    src: url(fonts/Cookie-Regular.ttf);
-    
+    font-family: 'Goldman';
+    src: url(fonts/Goldman-Regular.ttf); 
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Regular.ttf); 
 }
 
 :root {
-    --color1: rgb(0, 0, 0);
-    --color2: rgb(199, 199, 199);
-    --color3: rgb(80, 80, 80);
-    --font1: 'Cookie';
+    --color1: rgb(0, 1, 47);
+    --color2: rgb(145, 193, 255);
+    --color3: rgb(38, 56, 129);
+    --color4: rgb(255, 255, 255);
+    --color5: rgb(0, 1, 47);
+    --font1: 'Goldman';
+    --font2: 'Roboto';
 }
 
 body {
     max-width: 960px;
     margin: auto;
     background-color: var(--color1);
-    font-family: Arial, Helvetica, sans-serif;
+    border-left: 2px solid var(--color4);
+    border-right: 2px solid var(--color4);
+    font-family: var(--font2);
+    padding: 0;
 }
 
 .wrapper {
     min-height: 100vh;
-    background-color: var(--color3);
+    background-image: radial-gradient(var(--color2), var(--color5));
 }
 
 header {
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/ocean.jpg);
+    background-position: center;
+    padding: 30px;
 }
 
 footer {
-    text-align: center;
-    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 40px 20px;
 }
 
-footer a, footer p{
-    font-size: 16px;
+footer a, footer p {
+    display: inline;
+    font-family: var(--font2);
+    font-size: 14px;
+    font-weight: 100;
     text-decoration: none;
+    margin: 0;
     text-align: center;
-    color: var(--color2);
+    color: var(--color4);
 }
 
 h1 {
     font-family: var(--font1);
-    font-weight: 100;
-    font-style: italic;
-    text-shadow: black 2px 2px;
-    color: var(--color2);
-    font-size: 64px;
     text-align: center;
+    text-shadow: black 0 0 0.5rem, black 0 0 0.5rem;
+    color: var(--color4);
+    font-size: 60px;
     margin: 0;
 }
 
 h2 {
-    color: var(--color1);
+    font-family: var(--font1);
+    color: var(--color4);
     font-size: 30px;
     text-align: center;
-    background-color: var(--color2);
+    min-height: 36px;
+}
+
+.bar {
+    background-image: linear-gradient(var(--color2), var(--color1));
+    box-shadow: black 0 5px 5px;
+    margin: 20px;
+    min-height: 36px;
 }
 
 h3 {
-    color: var(--color2);
-    font-size: 20px;
+    color: var(--color5);
+    font-size: 18px;
+    margin: 0;
 }
 
 p {
-    color: var(--color2);
+    color: var(--color5);
     font-size: 14px;
 }
 
 ul {
+    display: flex;
     padding: 0;
+    margin: 0;
     list-style: none;
+}
+
+li {
+    margin-left: 0 25px;
+    text-align: center;
+}
+
+.contact-divider {
+    min-height: 100%;
+    width: 1px;
+    background-color: var(--color4);
+    margin: 0 10px;
 }
 
 .project-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: var(--color3);
+    padding: 0 20px;
+    
 }
 
 .project-btn {
-    background-color: var(--color1);
-    border: 2px solid var(--color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(var(--color4), var(--color2));
+    border: 2px solid var(--color4);
     border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
+    min-height: 150px;
     padding: 20px;
     margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: black 0 5px 5px;
 }
 
 @media screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 { 
+        font-size: 26px;
+    }
+
     .project-gallery {
         grid-template-columns: 1fr;
     }
+
+    ul {
+        flex-direction: column;
+    }
+
+    .contact-divider {
+        display: none;
+    }
+
 }
