@@ -3,10 +3,17 @@
     src: url(fonts/SF_Shai_Fontai_Extended.ttf);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /***************************************************
-        CSS for screens smaller than 600px.
-        For desktop CSS, go to bottom.
+        CSS rules for big and small screens
 ***************************************************/
+html {
+    background-color: rgb(100,100,100);
+}
 body {
     max-width: 960px;
     margin: auto;
@@ -28,8 +35,8 @@ body {
     text-align: center;
     background-color: black;
 }
-h1 {
-    margin: 0;
+a, .submit{
+    cursor: pointer;
 }
 h1 a {
     display: inline;
@@ -57,16 +64,14 @@ h2 > a {
 }
 h2 {
     text-align: center;
-    margin: 0 10px;
 }
 p {
     font-size: 16px;
-    margin: 10px;
     font-weight: lighter;
+    margin-bottom: 1vw;
 }
 ul {
     padding: 5px;
-    margin: 0;
     align-content: center;
 }
 .navbar {
@@ -83,26 +88,26 @@ ul {
 .gallery {
     display: flex;
     background-color: black;
-    justify-content: space-evenly;
-    padding-top: 3%;
+    justify-content: space-between;
+    padding: 2vw;
 }
 .image {
     width: 30%;
 }
-.main {
+.index-main, .booking-main {
     background-color: black;
-    padding: 10px 0;
+    padding: 0 6vw 2vw 6vw;
 }
-.article {
-    width: 95%;
+.index-article {
+    width: 100%;
 }
 .footer {
     display: flex;
-    height: 75px;
     align-items: center;
     justify-content: center;
     text-align-last: center;
     color: black;
+    padding: 2vw 0;
 }
 .footer, a {
     color: black;
@@ -111,49 +116,40 @@ ul {
     border-right: 3px solid red;
     padding-right: 5px;
 }
-.menu {
-    display: flex;
+.sub-heading {
     background-color: black;
-    padding: 0px 10px 10px 10px;
-    justify-content: center;
-}
-.sub_heading {
-    background-color: black;
+    text-decoration: underline red;
     font-size: 20px;
     font-weight: lighter;
-    padding: 10px 0 0 0;
     margin: 0;
+    padding-bottom: 2vw;
     color: white;
 }
-th {
-    padding-top: 10px;
-    color: red;
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
-td {
-    vertical-align: top;
-    padding: 0 5px;
-}
-.booking {
-    background-color: black;
-    padding: 10px 0;
+input {
+    width: 100%;
 }
 label {
     color: red;
 }
-input {
-    width: 95%;
-}
 .submit {
+    align-self: center;
     width: min-content;
-    margin: 20px 0;
+    margin: 3vw 0;
+    padding: 1vw;
     background-color: red;
     font-weight: bolder;
+    outline: none;
 }
 
 /***************************************************
-        CSS for screens bigger than 600px
+        CSS for screens bigger than 650px
 ***************************************************/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
     h1 a {
         font-size: 56px;
     }
@@ -162,9 +158,26 @@ input {
         flex-wrap: wrap;
         align-items: center;
     }
-    .main {
+    .nav{
+        padding-right: 2vw;
+    }
+    .index-main {
         display: flex;
-        flex-wrap: nowrap;
-        align-content: space-between;
+        justify-content: space-between;
+        padding: 0 2vw 2vw 2vw;
+    }
+    .booking-main {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 6vw 2vw 6vw;
+    }
+    .booking-article {
+        max-width: 45%;
+    }
+    .form-section {
+        width: 45%;
+    }
+    .index-article {
+        width: 30%;
     }
 }
