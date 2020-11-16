@@ -1,83 +1,95 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: black;
-    font-family: helvetica;
+    font-family: 'Times New Roman', Times, serif;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 100px 250px 250px 250px;
-    grid-template-rows: 100px 250px 250px 20px;
-    grid-template-areas: "logo header header navbar"
-    ". gallery gallery gallery"
-    ". art1 art2 art3"
-    ". footer footer footer";
+    max-width: 1024px; 
 }
-.logo {
-    grid-area: logo;
-}
+
 header {
-    align-self: center;
-    grid-area: header;
+    display: flex;
 }
-.navbar {
-    grid-area: navbar;
-    align-self: center;
-}
-.gallery {
-    grid-area: gallery;
-}
-article {
-    margin: 0 35px;
-}
-.art1 {
-    grid-area: art1;
-}
-.art2 {
-    grid-area: art2;
-}
-.art3 {
-    grid-area: art3;
-}
-footer {
-    grid-area: footer;
-    text-align: center;
-    font-style: italic;
-    font-size: smaller;
-}
-h1, h2, h3 {
-    font-family: 'Great Vibes', cursive;
-    font-weight: lighter;
-    color: white;
-    margin: 0;
-}
+
 h1 {
-    font-size: 64px;
-    font-style: italic;
+    font-family: 'Great Vibes';
+    color: white;
+    font-size: 90px;
+    font-weight: 100;
+    text-shadow: white 0 0 10px;
+    margin-top: 15px;
 }
+
 h2 {
-    font-size: 32px;
-    font-style: italic;
+    font-family: 'Great Vibes';
+    color: white;
+    font-size: 36px;
+    font-weight: 100;
+    text-shadow: white 0 0 10px;
 }
-h3 {
-    font-size: 64px;
-}
+
 p {
     color: white;
-    margin: 0;  
+    font-size: 16px;
+    font-weight: 100;
 }
-article {
-    margin-top: 32px;
+
+.phone a {
+    display: block;
+    font-family: 'Great Vibes';
+    background-color: white;
+    color:black;
+    font-size: 60px;
+    font-weight: 100;
+    text-shadow: white 0 0 10px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: white 0 0 10px;
 }
-.image {
-    width: 362px;
-    border: 3px solid white;
-    margin: 2px;
-}
-li {
-    display: inline;
-}
-a {
+
+#logo {
     color: white;
+    font-size: 90px;
+    text-shadow: white 0 0 10px;
 }
-a:hover {
-    color: gray;
+
+.gallery {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.image {
+    width: 45%;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: white 0 0 10px;
+}
+
+.articles {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px 0;
+}
+
+article {
+    width: 30%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
+
+.email {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
 }
