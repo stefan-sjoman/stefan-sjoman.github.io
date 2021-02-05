@@ -1,0 +1,183 @@
+@font-face {
+    font-family: sushi;
+    src: url(fonts/SF_Shai_Fontai_Extended.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/***************************************************
+        CSS rules for big and small screens
+***************************************************/
+html {
+    background-color: rgb(100,100,100);
+}
+body {
+    max-width: 960px;
+    margin: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.container {
+    background-color: rgb(202, 202, 202);
+}
+.header {
+    justify-content: space-between;
+}
+.heading {
+    display: flex;
+    justify-items: left;
+    align-items: center;
+}
+.nav {
+    text-align: center;
+    background-color: black;
+}
+a, .submit{
+    cursor: pointer;
+}
+h1 a {
+    display: inline;
+    align-self: center;
+    font-family: sushi;
+    color: white;
+    text-shadow: 1px 1px black, -1px -1px black,
+                -1px 1px black, 1px -1px black;
+    font-size: 34px;
+    line-height: 90%;
+    word-spacing: -10px;
+    text-decoration: none;
+    margin: 0 4px 8px 4px;
+}
+li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+h2 > a {
+    color:white;
+    text-decoration-color: red;
+    font-size: 20px;
+    font-weight: lighter;
+}
+h2 {
+    text-align: center;
+}
+p {
+    font-size: 16px;
+    font-weight: lighter;
+    margin-bottom: 1vw;
+}
+ul {
+    padding: 5px;
+    align-content: center;
+}
+.navbar {
+    background-color: black;
+    list-style: none;
+    display: inline;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    margin: 4px;
+}
+.gallery {
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    padding: 2vw;
+}
+.image {
+    width: 30%;
+}
+.index-main, .booking-main {
+    background-color: black;
+    padding: 0 6vw 2vw 6vw;
+}
+.index-article {
+    width: 100%;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align-last: center;
+    color: black;
+    padding: 2vw 0;
+}
+.footer, a {
+    color: black;
+}
+.divider {
+    border-right: 3px solid red;
+    padding-right: 5px;
+}
+.sub-heading {
+    background-color: black;
+    text-decoration: underline red;
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 0;
+    padding-bottom: 2vw;
+    color: white;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+input {
+    width: 100%;
+}
+label {
+    color: red;
+}
+.submit {
+    align-self: center;
+    width: min-content;
+    margin: 3vw 0;
+    padding: 1vw;
+    background-color: red;
+    font-weight: bolder;
+    outline: none;
+}
+
+/***************************************************
+        CSS for screens bigger than 650px
+***************************************************/
+@media screen and (min-width: 650px) {
+    h1 a {
+        font-size: 56px;
+    }
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .nav{
+        padding-right: 2vw;
+    }
+    .index-main {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2vw 2vw 2vw;
+    }
+    .booking-main {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 6vw 2vw 6vw;
+    }
+    .booking-article {
+        max-width: 45%;
+    }
+    .form-section {
+        width: 45%;
+    }
+    .index-article {
+        width: 30%;
+    }
+}
