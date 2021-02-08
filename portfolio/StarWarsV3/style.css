@@ -1,0 +1,191 @@
+/*********************** PAGE RULES ***********************/
+
+@font-face {
+    font-family: ropa;
+    src: url("fonts/RopaSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("images/planet.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #424242;
+    font-family: roboto;
+    margin: 5%;
+}
+
+header {
+    max-width: 30vw;
+}
+
+main {
+    justify-content: center;
+}
+
+h1, h2 {
+    font-family: ropa;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    color: #ffd600;
+}
+
+h1 {
+    font-size: 4vw; 
+    letter-spacing: 1vw;
+}
+
+h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 10px 10px 0 0; 
+}
+
+/*********************** CONTENT RULES ***********************/
+
+.content-section {
+    width: 100%;
+    margin: 5% 0;
+}
+
+li {
+    list-style: none;
+}
+
+/*--------- Characters Content ---------*/
+
+#characters-header {
+    background-color: #535556;
+}
+
+#characters-list {
+    min-height: 440px;
+}
+
+#characters-list li {
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.list-dark-color {
+    background-color: #8e8e8e;
+    color: #ffffff;
+}
+
+.list-light-color {
+    background-color: #e1dede;
+}
+
+.list-active-color {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/*--------- Details Content ---------*/
+
+#details-header {
+    background-color: #748687;
+}
+
+#character-info {
+    background-color: #c4c4c4;
+}
+
+#homeworld-info {
+    background-color: #8e8e8e;
+    color: #ffffff;
+}
+
+#character-list, #homeworld-list {
+    padding: 10px;
+    min-height: 218px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 24px;
+}
+
+#character-list :first-child, #homeworld-list :first-child {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+/*--------- Load Animation ---------*/
+
+.load-ring-big {
+    min-height: 420px;
+    background-color: #c4c4c4; 
+}
+
+.load-ring-small {
+    min-height: 210px;
+    background-color: #8e8e8e;
+}
+
+.load-ring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 10px solid #000;
+    border-color: #000 transparent #000 transparent;
+    animation: load-ring 0.8s linear infinite;
+}
+
+@keyframes load-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*********************** DESKTOP RULES ***********************/
+
+@media screen and (min-width: 850px) {
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-section {
+        width: 100%;
+        margin: 5%
+    }
+}
