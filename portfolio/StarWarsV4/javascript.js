@@ -152,9 +152,15 @@ function createDetails(character) {
 
 async function getHomeworld(url){
 
+    // Fix https error from swapi
+    if (!url.includes("https")) {
+        url = url.replace("http", "https");
+    }
+
     respons = await myFetch(url);
 
     homeworldData = respons;
+
     createHomeworld(homeworldData);
 }
 
